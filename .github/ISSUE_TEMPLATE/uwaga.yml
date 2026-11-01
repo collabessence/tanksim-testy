@@ -1,0 +1,17 @@
+name: Uwaga do rozgrywki
+description: Pomysł, niejasność, balans, czucie jazdy i celowania
+labels: ["rozgrywka"]
+body:
+  - type: input
+    id: wersja
+    attributes:
+      label: Wersja gry
+    validations:
+      required: true
+  - type: textarea
+    id: uwaga
+    attributes:
+      label: Uwaga
+      description: Co było niejasne, nudne, za łatwe/za trudne, albo co chcesz zmienić.
+    validations:
+      required: true

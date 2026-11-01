@@ -1,0 +1,50 @@
+name: Zgłoszenie błędu
+description: Coś się wywala, wygląda źle albo nie działa jak powinno
+labels: ["błąd"]
+body:
+  - type: input
+    id: wersja
+    attributes:
+      label: Wersja gry
+      description: Z nazwy pobranego zipa, np. v0.0.1
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      options: ["Windows 10/11", "Linux", "Inny"]
+    validations:
+      required: true
+  - type: input
+    id: sprzet
+    attributes:
+      label: Karta graficzna i RAM
+      description: np. GTX 1060 6 GB, 16 GB RAM
+  - type: dropdown
+    id: rola
+    attributes:
+      label: Byłem
+      options: ["Hostem", "Klientem", "Graliśmy lokalnie na jednym komputerze"]
+  - type: input
+    id: rola-w-czolgu
+    attributes:
+      label: Czołg i rola
+      description: np. Tiger I, działonowy
+  - type: textarea
+    id: opis
+    attributes:
+      label: Co się stało
+      description: Co robiłeś tuż przed, czego się spodziewałeś, co zobaczyłeś. Czy da się powtórzyć?
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: "Plik godot.log z folderu logów (ścieżki w README). Przeciągnij plik tutaj albo wklej zawartość."
+  - type: textarea
+    id: zrzut
+    attributes:
+      label: Zrzut ekranu
+      description: Przeciągnij obraz tutaj.
